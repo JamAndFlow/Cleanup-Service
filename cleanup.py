@@ -6,7 +6,7 @@ from sqlalchemy import create_engine, text
 from sqlalchemy.orm import sessionmaker
 
 from config import settings
-from models import Base, OTP
+from models import OTP, Base
 
 # Set up logging with explicit handler control
 logger = logging.getLogger(__name__)
