@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  cleanup:
+    build: .
+    container_name: otp_cleanup_service
+    env_file:
+      - .env
+    networks:
+      - jamandflows-network
+    restart: "no"  # Don't auto-restart on failure
+
+volumes:
+  postgres_data:
+
+networks:
+  jamandflows-network:
+    external: true
